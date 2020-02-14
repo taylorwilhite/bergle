@@ -94,7 +94,7 @@ function draw() {
     }
   }
 }
-function mouseClicked() {
+function touchStarted() {
   for (let i = 0; i < headArr.length; i++) {
     let {x, y, vx, vy} = headArr[i]
     let cx = x + vx
