@@ -94,3 +94,18 @@ function draw() {
     }
   }
 }
+function mouseClicked() {
+  for (let i = 0; i < headArr.length; i++) {
+    let {x, y, vx, vy} = headArr[i]
+    let cx = x + vx
+    let cy = y + vy
+    if (mouseX > cx - d / 2 &&
+      mouseX < cx + d / 2 &&
+      mouseY > cy - d / 2 &&
+      mouseY < cy + d / 2) {
+        if (!headArr[i].sound.isPlaying()) {
+          headArr[i].sound.play()
+        }
+      }
+  }
+}
