@@ -51,6 +51,7 @@ function setup() {
     
     headArr.push(circle)
   }
+  userStartAudio()
 }
 
 function draw() {
@@ -94,7 +95,11 @@ function draw() {
     }
   }
 }
+function mouseMoved() {
+  userStartAudio()
+}
 function touchStarted() {
+  userStartAudio()
   for (let i = 0; i < headArr.length; i++) {
     let {x, y, vx, vy} = headArr[i]
     let cx = x + vx
