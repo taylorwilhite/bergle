@@ -51,6 +51,7 @@ function setup() {
     
     headArr.push(circle)
   }
+  userStartAudio()
 }
 
 function draw() {
@@ -92,5 +93,24 @@ function draw() {
     if (cy > height || cy < 0) {
       headArr[i].vy *= -1
     }
+  }
+}
+function mouseMoved() {
+  userStartAudio()
+}
+function touchStarted() {
+  userStartAudio()
+  for (let i = 0; i < headArr.length; i++) {
+    let {x, y, vx, vy} = headArr[i]
+    let cx = x + vx
+    let cy = y + vy
+    if (touchX > cx - d / 2 &&
+      touchX < cx + d / 2 &&
+      touchY > cy - d / 2 &&
+      touchY < cy + d / 2) {
+        if (!headArr[i].sound.isPlaying()) {
+          headArr[i].sound.play()
+        }
+      }
   }
 }
