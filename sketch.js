@@ -99,10 +99,10 @@ function touchStarted() {
     let {x, y, vx, vy} = headArr[i]
     let cx = x + vx
     let cy = y + vy
-    if (mouseX > cx - d / 2 &&
-      mouseX < cx + d / 2 &&
-      mouseY > cy - d / 2 &&
-      mouseY < cy + d / 2) {
+    if (touchX > cx - d / 2 &&
+      touchX < cx + d / 2 &&
+      touchY > cy - d / 2 &&
+      touchY < cy + d / 2) {
         if (!headArr[i].sound.isPlaying()) {
           headArr[i].sound.play()
         }
