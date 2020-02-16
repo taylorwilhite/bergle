@@ -60,7 +60,7 @@ function draw() {
   textFont('Lato')
   fill(30)
   textAlign(CENTER, CENTER)
-  text('#Bloomberg2020', width / 2, 2 * height / 10)
+  text('#FuckBloomberg', width / 2, 2 * height / 10)
   
   for (let i = 0; i < headArr.length; i++) {
     let {x, y, vx, vy} = headArr[i]
